@@ -17,17 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
+WebUI.callTestCase(findTestCase('Login/0. Login Valid no Stop'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-
-WebUI.setText(findTestObject('Object Repository/Login/input_Username_username'), 'Admin')
-
-WebUI.setEncryptedText(findTestObject('Object Repository/Login/input_Password_password'), 'hUKwJTbofgPU9eVlw/CnDQ==')
-
-WebUI.takeScreenshotAsCheckpoint('Landing page')
-
-WebUI.click(findTestObject('Object Repository/Login/button_Login'))
-
-WebUI.takeScreenshotAsCheckpoint('Homepage')
+WebUI.closeBrowser()
 
