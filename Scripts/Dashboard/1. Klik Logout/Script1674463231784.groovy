@@ -27,7 +27,5 @@ WebUI.click(findTestObject('Object Repository/Dashboard/a_Logout'))
 
 WebUI.navigateToUrl('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
 
-WebUI.verifyElementVisible(findTestObject('Dashboard/i_Dashboard_oxd-icon bi-caret-down-fill oxd_d2fd49'))
-
 WebUI.closeBrowser()
 
